@@ -21,5 +21,15 @@ public class Rectangle {
         this.x  += (float)delta/this.speed;
     }
 
+    public void directionUp(){
+        x++;
+    }
+    public void directionDown(){
+        x--;
+    }
+    public void directionRight(){
+        y++;
+    }
+
 
 }
