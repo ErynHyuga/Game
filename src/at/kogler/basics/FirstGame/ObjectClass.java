@@ -22,12 +22,13 @@ public class ObjectClass extends BasicGame {
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
         this.rect1.update(delta);
-
+        this.rect2.update(delta);
     }
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
         this.rect1.render(graphics);
+        this.rect2.render(graphics);
     }
 
     public static void main(String[] argv) {
@@ -38,5 +39,6 @@ public class ObjectClass extends BasicGame {
         } catch (SlickException e) {
             e.printStackTrace();
         }
+
     }
 }
