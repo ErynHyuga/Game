@@ -10,8 +10,6 @@ import java.util.List;
 
 public class ObjectClass extends BasicGame {
     private List<Actor> actors;
-    private List<Rectangle> rectangles;
-    private List<Circle> circles;
 
 
     public ObjectClass(String title) {
@@ -24,7 +22,7 @@ public class ObjectClass extends BasicGame {
 
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
-            Rectangle rectangle = new Rectangle(random.nextInt(600),
+            Rectangle rectangle = new Rectangle(random.nextInt(800),
                     random.nextInt(600), random.nextInt(2));
             this.actors.add(rectangle);
         }
@@ -32,27 +30,27 @@ public class ObjectClass extends BasicGame {
             Circle circle = new Circle();
             this.actors.add(circle);
         }
+        for (int i = 0; i < 20; i++) {
+            Ellipse ellipse = new Ellipse(random.nextInt(800), random.nextInt(600));
+            this.actors.add(ellipse);
+        }
 
     }
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
-        for (Rectangle rectangle : this.actors) {
-            rectangle.update(delta);
-        }
-        for (Circle circle : this.actors) {
-            circle.update(delta);
+        for (Actor actor :
+                this.actors) {
+            actor.update(delta);
         }
 
     }
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
-        for (Rectangle rectangle : this.actors) {
-            rectangle.render(graphics);
-        }
-        for (Circle circle : this.actors) {
-            circle.render(graphics);
+        for (Actor actor :
+                this.actors) {
+            actor.render(graphics);
         }
     }
 

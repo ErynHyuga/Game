@@ -4,7 +4,7 @@ import org.newdawn.slick.Graphics;
 
 import java.util.Random;
 
-public class Circle {
+public class Circle implements Actor{
 
 
     private int x, y;
@@ -40,7 +40,7 @@ public class Circle {
         this.y -= (float) delta / this.speed;
     }
     public void directionDown(int delta) {
-        this.y -= (float) delta / this.speed;
+        this.y += (float) delta / this.speed;
     }
     public void directionRight(int delta) {
         this.x += (float) delta / this.speed;
