@@ -22,7 +22,7 @@ public class Rectangle {
     }
 
     public void update(int delta) {
-        directionUp(delta);
+        directionDown(delta);
         if (this.y >= 600) {
             this.y = 0;
         }
@@ -33,7 +33,7 @@ public class Rectangle {
     }
 
     public void directionUp(int delta) {
-        this.y += (float) delta / this.speed;
+        this.y -= (float) delta / this.speed;
     }
     public void directionDown(int delta) {
         this.y -= (float) delta / this.speed;

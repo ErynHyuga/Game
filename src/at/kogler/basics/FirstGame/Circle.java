@@ -37,17 +37,14 @@ public class Circle {
     }
 
     public void directionUp(int delta) {
-        this.y += (float) delta / this.speed;
+        this.y -= (float) delta / this.speed;
     }
-
     public void directionDown(int delta) {
         this.y -= (float) delta / this.speed;
     }
-
     public void directionRight(int delta) {
         this.x += (float) delta / this.speed;
     }
-
     public void directionLeft(int delta) {
         this.x -= (float) delta / this.speed;
     }
