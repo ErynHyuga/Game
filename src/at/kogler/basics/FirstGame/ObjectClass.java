@@ -23,7 +23,7 @@ public class ObjectClass extends BasicGame {
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
             Rectangle rectangle = new Rectangle(random.nextInt(800),
-                    random.nextInt(600), random.nextInt(2));
+                    random.nextInt(600), random.nextInt(2), Rectangle.DIRECTION.RIGHT);
             this.actors.add(rectangle);
         }
         for (int i = 0; i < 50; i++) {

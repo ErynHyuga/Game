@@ -9,11 +9,14 @@ public class Rectangle implements Actor {
     private int y;
     private float speed;
 
-    public Rectangle(int x, int y, float speed) {
+    private DIRECTION direction = DIRECTION.RIGHT;
+
+
+    public Rectangle(int x, int y, float speed, DIRECTION direction) {
         this.x = x;
         this.y = y;
-
         this.speed = speed;
+        this.direction = direction;
     }
 
     public void render(Graphics graphics) {
@@ -22,7 +25,22 @@ public class Rectangle implements Actor {
     }
 
     public void update(int delta) {
-        directionDown(delta);
+
+        switch (direction){
+            case RIGHT:
+                directionRight(delta);
+                break;
+            case LEFT:
+                directionLeft(delta);
+                break;
+            case DOWN:
+                directionDown(delta);
+                break;
+            case UP:
+                directionUp(delta);
+                break;
+        }
+
         if (this.y >= 600) {
             this.y = -25;
         }
