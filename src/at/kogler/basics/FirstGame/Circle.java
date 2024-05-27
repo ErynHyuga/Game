@@ -7,14 +7,15 @@ import java.util.Random;
 
 public class Circle implements Actor{
 
+    private int size0 = 20;
+    Random random = new Random();
     public enum DIRECTION {RIGHT, DOWN, LEFT, UP};
     private int x, y;
     private float speed;
-    private int diameter;
+    private float diameter;
     private DIRECTION direction = DIRECTION.LEFT;
 
     public Circle(int x, int y, DIRECTION direction) {
-        Random random = new Random();
         this.x = x;
         this.y = y;
         this.speed = 2;
@@ -28,7 +29,11 @@ public class Circle implements Actor{
     }
 
     public void update(int delta) {
-
+        //resetter not working :sad:
+        if(this.y >= 600){
+            this.diameter = size0;
+        }
+        this.diameter += 0.05;
         switch (direction){
             case RIGHT:
                 directionRight(delta);
