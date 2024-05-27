@@ -4,12 +4,16 @@ import org.newdawn.slick.Graphics;
 
 public class Ellipse implements Actor {
 
+    public enum DIRECTION {RIGHT, DOWN, LEFT, UP};
     private int x,y;
     private float speed;
-    public Ellipse(int x, int y) {
+    private DIRECTION direction = DIRECTION.RIGHT;
+
+    public Ellipse(int x, int y, DIRECTION direction) {
         this.x = x;
         this.y = y;
         this.speed = 2;
+        this.direction = direction;
     }
 
     @Override
@@ -19,8 +23,20 @@ public class Ellipse implements Actor {
 
     @Override
     public void update(int delta) {
-        directionDown(delta);
-        directionRight(delta);
+        switch (direction){
+            case RIGHT:
+                directionRight(delta);
+                break;
+            case LEFT:
+                directionLeft(delta);
+                break;
+            case DOWN:
+                directionDown(delta);
+                break;
+            case UP:
+                directionUp(delta);
+                break;
+        }
         if (this.y >= 600) {
             this.y = -25;
         }
