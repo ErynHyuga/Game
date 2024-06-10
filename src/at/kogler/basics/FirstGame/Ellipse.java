@@ -57,4 +57,5 @@ public class Ellipse implements Actor {
     public void directionLeft(int delta) {
         this.x -= (float) delta / this.speed;
     }
+
 }
