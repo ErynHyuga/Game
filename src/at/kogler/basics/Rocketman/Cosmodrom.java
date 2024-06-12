@@ -21,7 +21,7 @@ public class Cosmodrom extends BasicGame {
         this.rocketActors = new ArrayList<>();
         Random random = new Random();
         Rocket rocket = new Rocket(10,10,0,10,10);
-    this.rocketActors.add(rocket);
+        this.rocketActors.add(rocket);
 
     }
     @Override
@@ -34,7 +34,7 @@ public class Cosmodrom extends BasicGame {
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
-        graphics.drawRect(10,10,100,100);
+
         for (KomorovActor actor :
                 this.rocketActors) {
             actor.render(graphics);
