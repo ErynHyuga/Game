@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.List;
 
 public class Snowworld extends BasicGame {
-    private List<Actor> actors;
+    private List<NicolausActor> actors;
 
 
     public Snowworld(String title) {
@@ -37,15 +37,14 @@ public class Snowworld extends BasicGame {
         }
     }
     public void update(GameContainer gameContainer, int delta) throws SlickException {
-        for (Actor actor :
+         for (NicolausActor actor :
                 this.actors) {
             actor.update(delta);
         }
-
     }
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
-        for (Actor actor :
+        for (NicolausActor actor :
                 this.actors) {
             actor.render(graphics);
         }

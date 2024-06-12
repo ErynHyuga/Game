@@ -9,7 +9,7 @@ import java.util.Random;
 import java.util.List;
 
 public class ObjectClass extends BasicGame {
-    private List<Actor> actors;
+    private List<PrimariusActor> actors;
 
 
     public ObjectClass(String title) {
@@ -42,7 +42,7 @@ public class ObjectClass extends BasicGame {
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
-        for (Actor actor :
+        for (PrimariusActor actor :
                 this.actors) {
             actor.update(delta);
         }
@@ -51,7 +51,7 @@ public class ObjectClass extends BasicGame {
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
-        for (Actor actor :
+        for (PrimariusActor actor :
                 this.actors) {
             actor.render(graphics);
         }

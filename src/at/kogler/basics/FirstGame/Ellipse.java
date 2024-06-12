@@ -2,7 +2,7 @@ package at.kogler.basics.FirstGame;
 
 import org.newdawn.slick.Graphics;
 
-public class Ellipse implements Actor {
+public class Ellipse implements PrimariusActor {
 
     public enum DIRECTION {RIGHT, DOWN, LEFT, UP};
     private int x,y;

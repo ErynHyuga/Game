@@ -1,10 +1,8 @@
 package at.kogler.basics.Snowflake;
 
-import at.kogler.basics.Snowflake.Actor;
 import org.newdawn.slick.Graphics;
-import java.util.Random;
 
-public class Snowflake implements Actor {
+public class Snowflake implements NicolausActor {
 
 
 

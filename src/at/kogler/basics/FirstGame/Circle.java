@@ -2,10 +2,9 @@ package at.kogler.basics.FirstGame;
 
 import org.newdawn.slick.Graphics;
 
-import javax.swing.plaf.basic.BasicSplitPaneUI;
 import java.util.Random;
 
-public class Circle implements Actor{
+public class Circle implements PrimariusActor {
 
     private int size0 = 20;
     Random random = new Random();

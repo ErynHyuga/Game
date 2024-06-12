@@ -3,7 +3,7 @@ package at.kogler.basics.FirstGame;
 
 import org.newdawn.slick.Graphics;
 
-public class Rectangle implements Actor {
+public class Rectangle implements PrimariusActor {
     public enum DIRECTION {RIGHT, DOWN, LEFT, UP};
     private int x;
     private int y;
