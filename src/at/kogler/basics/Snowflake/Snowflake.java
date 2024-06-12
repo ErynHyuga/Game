@@ -6,35 +6,24 @@ import java.util.Random;
 
 public class Snowflake implements Actor {
 
-    public enum TYPE {BIG, SMALL, MEDIUM};
-    private TYPE type;
+
+
     private int x,y;
     private float speed;
     private int diameter;
 
-    public Snowflake(TYPE type, int x, int y, float speed) {
+
+    public Snowflake(int x, int y, int diameter) {
         this.x = x;
         this.y = y;
-        this.speed = speed;
-        this.type = type;
-        if (type == TYPE.BIG){
-            this.diameter = 15;
-            this.speed = 7;
-        }
-        if (type == TYPE.MEDIUM){
-            this.diameter = 11;
-            this.speed = 11;
-        }
-        if (type == TYPE.SMALL){
-            this.diameter = 7;
-            this.speed = 15;
-        }
-
+        this.speed = 3;
+        this.diameter = diameter;
     }
 
     @Override
     public void render(Graphics graphics) {
-        graphics.drawOval(this.x,this.y,20,20);
+        graphics.fillOval(this.x,this.y,this.diameter,this.diameter);
+        
     }
 
     @Override

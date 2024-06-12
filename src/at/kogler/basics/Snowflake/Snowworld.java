@@ -23,12 +23,12 @@ public class Snowworld extends BasicGame {
         Random random = new Random();
 
         for (int i = 0; i < 100; i++) {
-            Snowflake snowflake1 = new Snowflake(Snowflake.TYPE.SMALL, random.nextInt(800),
-                    random.nextInt(600), 2);
-            Snowflake snowflake2 = new Snowflake(Snowflake.TYPE.BIG, random.nextInt(800),
-                    random.nextInt(600), 2);
-            Snowflake snowflake3 = new Snowflake(Snowflake.TYPE.MEDIUM, random.nextInt(800),
-                    random.nextInt(600), 2);
+            Snowflake snowflake1 = new Snowflake(random.nextInt(800),
+                    random.nextInt(600), 10);
+            Snowflake snowflake2 = new Snowflake(random.nextInt(800),
+                    random.nextInt(600),15);
+            Snowflake snowflake3 = new Snowflake(random.nextInt(800),
+                    random.nextInt(600), 20);
 
             actors.add(snowflake1);
             actors.add(snowflake2);
