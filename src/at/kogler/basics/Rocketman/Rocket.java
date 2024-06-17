@@ -12,14 +12,14 @@ public class Rocket implements KomorovActor {
 
 
 
-    public Rocket( int x, int y, float speed, int length, int width) {
+    public Rocket( ) {
         try {
             this.rocketBlueprint = new Image("testdata/soyuzR7.png");
-            this.x = x;
-            this.y = y;
-            this.speed = speed;
-            this.length = length;
-            this.width = width;
+            this.x = 100;
+            this.y = 1;
+            this.speed = 2;
+            this.length = 600;
+            this.width = 150;
 
         } catch (SlickException e) {
             System.out.println(e.getMessage());
@@ -29,7 +29,7 @@ public class Rocket implements KomorovActor {
     @Override
     public void render(Graphics graphics) {
         rocketBlueprint.draw();
-        graphics.drawRect(10, 10, 100, 100);
+
 
     }
 
