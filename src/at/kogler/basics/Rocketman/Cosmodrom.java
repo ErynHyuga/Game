@@ -24,13 +24,19 @@ public class Cosmodrom extends BasicGame {
         this.rocketActors.add(rocket);
 
     }
+
+    public void keyPressed(int key, char c){
+        System.out.println(key);
+    }
+
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
         for (KomorovActor actor :
                 this.rocketActors) {
-            actor.update(delta);
+            actor.update(gameContainer, delta);
         }
     }
+
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
